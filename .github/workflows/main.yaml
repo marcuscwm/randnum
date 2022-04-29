@@ -37,12 +37,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Obi-wan",
-                    "text": "Matriculation: 404",
-                    "text": "Email: 404",
-                    "text": "Repo: 404",
-                    "text": "Image name: 404",
-                    "text": "Image url: https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "text": "Name: Obi-wan \n Matriculation: 404 \n Email: 404 \n Repo: 404 \n Image name: 404 \n Image url: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                   }
                 }
               ]
