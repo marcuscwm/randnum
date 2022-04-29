@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v2.10.0
         with:
           push: true
-          tags: randnum:v1.0.0
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/randnum:v1.0.0
 
       - name: Send custom JSON data to Slack workflow
         id: slack
