@@ -32,13 +32,17 @@ jobs:
           # For posting a rich message using Block Kit
           payload: |
             {
-              "text": "test message 1",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "test message 2"
+                    "text": "Name: Obi-wan",
+                    "text": "Matriculation: 404",
+                    "text": "Email: 404",
+                    "text": "Repo: 404",
+                    "text": "Image name: 404",
+                    "text": "Image url: https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                   }
                 }
               ]
