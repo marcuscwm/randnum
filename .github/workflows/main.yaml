@@ -23,21 +23,22 @@ jobs:
         uses: docker/build-push-action@v2.10.0
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{ github.ref_name }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.ref_name }}
 
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.18.0
         with:
           # For posting a rich message using Block Kit
+          # Repo: ${{ github.repositoryUrl }}
           payload: |
             {
               "blocks": [
                 {
-                  "type": "section",
+                  "type": "section"
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Obi-wan \n Matriculation: 404 \n Email: higher_ground@jedi-council.com \n Repo: 404 \n Image name: 404 \n Image url: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    "text": "Name: Obi-wan \n Matriculation: 404 \n Email: higher_ground@jedi-council.com \n Repo:  \n Image name: 404 \n Image url: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}"
                   }
                 }
               ]
