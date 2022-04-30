@@ -38,7 +38,7 @@ jobs:
                   "type": "section"
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Obi-wan \n Matriculation: 404 \n Email: higher_ground@jedi-council.com \n Repo:  \n Image name: 404 \n Image url: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/randnum"
+                    "text": "Name: Obi-wan \n Matriculation: 404 \n Email: higher_ground@jedi-council.com \n Repo:  \n Image name: 404 \n Image url: https://hub.docker.com/r/someusername/randnum"
                   }
                 }
               ]
