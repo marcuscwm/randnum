@@ -38,7 +38,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Cheong Wei Ming Marcus \n Matriculation: A0124816H \n Email: e0941873@u.nus.edu \n Repo:  \n Image name: 404 \n Image url: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/randnum"
+                    "text": "Name: Cheong Wei Ming Marcus \n Matriculation: A0124816H \n Email: e0941873@u.nus.edu \n Repo:  \n Image name: ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{ github.ref_name }} \n Image url: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/randnum"
                   }
                 }
               ]
