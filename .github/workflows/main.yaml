@@ -30,7 +30,6 @@ jobs:
         uses: slackapi/slack-github-action@v1.18.0
         with:
           # For posting a rich message using Block Kit
-          # Repo: ${{ github.repositoryUrl }}
           payload: |
             {
               "blocks": [
@@ -38,7 +37,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Cheong Wei Ming Marcus \n Matriculation: A0124816H \n Email: e0941873@u.nus.edu \n Repo:  \n Image name: ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{ github.ref_name }} \n Image url: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/randnum"
+                    "text": "Name: ${{ secrets.NAME }} \n Matriculation: ${{ secrets.MATRIC_NUM }} \n Email: ${{ secrets.EMAIL }} \n Repo: ${{ github.repositoryUrl }} \n Image name: ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{ github.ref_name }} \n Image url: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/randnum"
                   }
                 }
               ]
