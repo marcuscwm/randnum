@@ -1,12 +1,16 @@
 name: Docker_workflow
 on:
-  push:
+  release:
+    types: [published]
     tags:
       - "v*"
 jobs:
   main_workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout 
+        uses: actions/checkout@v2.4.2
+
       - name: Docker Setup QEMU
         uses: docker/setup-qemu-action@v1.2.0
 
