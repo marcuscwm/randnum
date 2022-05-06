@@ -8,9 +8,7 @@ jobs:
   main_workflow:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 
-        uses: actions/checkout@v2.4.2
-
+      # https://github.com/marketplace/actions/build-and-push-docker-images
       - name: Docker Setup QEMU
         uses: docker/setup-qemu-action@v1.2.0
 
@@ -29,11 +27,11 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{ github.ref_name }}
 
+      # https://github.com/marketplace/actions/slack-send
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.18.0
         with:
-          # For posting a rich message using Block Kit
           payload: |
             {
               "blocks": [
